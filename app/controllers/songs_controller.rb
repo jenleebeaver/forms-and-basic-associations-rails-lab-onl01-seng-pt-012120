@@ -10,13 +10,13 @@ class SongsController < ApplicationController
   def new
     @song = Song.new
     @song.notes.build
-    #build method - creates attributes 
+    #build method - creates attributes
     @song.notes.build
   end
 
   def create
     @song = Song.new(song_params)
-
+    byebug 
     if @song.save
       redirect_to @song
     else
