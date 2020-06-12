@@ -16,8 +16,8 @@
   </div>
 
   <div>
-  <%= f.collection_select(:genre_id, Genre.all, :name, :name) %>
-  <%= f.collection_select :name %>
+  <%= f.label "Select Genre"%>
+  <%= f.select :genre_id, Genre.all, :name, :name) %>
   <br />
   </div>
 
