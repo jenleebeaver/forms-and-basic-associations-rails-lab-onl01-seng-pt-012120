@@ -16,7 +16,7 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-    byebug 
+    byebug
     if @song.save
       redirect_to @song
     else
@@ -50,7 +50,7 @@ class SongsController < ApplicationController
   private
 
   def song_params
-    params.require(:song).permit(:title, :artist_name, :genre_id)
+    params.require(:song).permit(:title, :artist_name, :genre_id, :content)
     #don't forget to permit new associated keys in forms
   end
 end
