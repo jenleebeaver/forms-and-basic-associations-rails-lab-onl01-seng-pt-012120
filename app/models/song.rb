@@ -11,5 +11,6 @@ class Song < ActiveRecord::Base
    def artist_name
       self.artist ? self.artist.name : nil
       # ? ternary
+      # this code works too = artist.try(:name)
    end
 end
