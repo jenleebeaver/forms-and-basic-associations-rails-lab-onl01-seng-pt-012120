@@ -50,7 +50,7 @@ class SongsController < ApplicationController
   private
 
   def song_params
-    params.require(:song).permit(:title, :artist_name, :genre_id, :content)
+    params.require(:song).permit(:title, :artist_name, :genre_id, :notes_attributes => [:content])
     #don't forget to permit new associated keys in forms
   end
 end
