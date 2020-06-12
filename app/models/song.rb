@@ -11,6 +11,6 @@ class Song < ActiveRecord::Base
    def artist_name
       self.artist ? self.artist.name : nil
       # ? ternary
-      # this code works too = artist.try(:name)
+      # this code works too = artist.try(:name). Try is a public method invoked by the symbol 
    end
 end
